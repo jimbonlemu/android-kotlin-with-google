@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         // Find the ImageView in the layout
         val diceImage : ImageView = findViewById(R.id.imageView)
+        val diceImage2 : ImageView = findViewById(R.id.imageView2)
 
         // Determine which drawable resource ID to use based on the dice roll
        val drawableResource =  when (diceRoll){
@@ -40,9 +41,11 @@ class MainActivity : AppCompatActivity() {
         toast.show()
         // Update the ImageView with the correct drawable resource ID
         diceImage.setImageResource(drawableResource)
+        diceImage2.setImageResource(drawableResource)
 
         // Update the content description
         diceImage.contentDescription = diceRoll.toString()
+        diceImage2.contentDescription = diceRoll.toString()
 
     }
 }
